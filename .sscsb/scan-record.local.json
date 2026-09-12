@@ -6,10 +6,10 @@
     "name": "awesome-grcengineering",
     "url": "https://github.com/grcengineering/awesome-grcengineering",
     "default_branch": "main",
-    "commit": "35986dab84cf02c6962049198caa47a70665371c",
+    "commit": "8b3c6c498e3083109dd06488591540c161b27433",
     "description": ""
   },
-  "scanned_at": "2026-09-12T15:48:01Z",
+  "scanned_at": "2026-09-12T15:54:32Z",
   "scanner": {
     "sscsb_version": "0.4.0",
     "workflow_run_id": 0,
@@ -45,8 +45,7 @@
         "git config gpg.format = ssh",
         "git config user.signingkey = /Users/p4gs/.ssh/github_signing_key.pub",
         "signing key does not look hardware-backed (no `-sk`) — spec recommends YubiKey ed25519-sk; software keys weaken the human-accountability model",
-        "git config commit.gpgSign = true",
-        "policy: hardware-backed keys required on protected branches"
+        "git config commit.gpgSign = true"
       ]
     },
     {
@@ -179,7 +178,7 @@
       "reclassified": false,
       "reason": null,
       "messages": [
-        "1 tracked file(s), none a compiled program or a code-carrying archive"
+        "35 tracked file(s), none a compiled program or a code-carrying archive"
       ]
     },
     {
@@ -237,13 +236,19 @@
       "id": "scorecard",
       "phase": 2,
       "in_scope": true,
-      "raw_outcome": "degraded",
-      "scan_outcome": "unverified",
-      "reclassified": true,
-      "reason": "the control could not be performed on this machine — an unperformed check is never a verdict",
+      "raw_outcome": "info",
+      "scan_outcome": "info",
+      "reclassified": false,
+      "reason": null,
       "messages": [
         ".github/workflows/scorecard.yml installed",
-        "live Scorecard results could not be read (none published yet — the workflow runs on push to the default branch — or the code-scanning API refused) — posture unverified"
+        "live Scorecard findings (5):",
+        "  FuzzingID [sscsb-fixable] → fuzzing — score is 0: project is not fuzzed: (add cargo-fuzz targets + a ClusterFuzzLite workflow (the probe Scorecard detects for Rust) — shipping as the `fuzzing` control increment)",
+        "  CIIBestPracticesID [owner-action] → no control — score is 0: no effort to earn an OpenSSF best practices badge detected (register the project at bestpractices.dev and add the badge — an owner action sscsb cannot perform)",
+        "  CodeReviewID [solo-capped] → branch-protection — score is 0: Found 0/3 approved changesets -- score normalized to 0 (Scorecard counts approved changesets; a solo maintainer merging their own PRs cannot self-approve — needs a 2nd reviewer)",
+        "  PinnedDependenciesID [justified-exception] → actions-audit — score is 9: third-party GitHubAction not pinned by hash (sscsb SHA-pins every action except slsa-github-generator, which MUST stay tag-pinned per its trust model — the residual finding is that justified exception)",
+        "  BranchProtectionID [sscsb-fixable] → branch-protection — score is 0: branch protection not enabled on development/release branches: (run `sscsb harden branch-protection --apply` for the solo-safe knobs; the approver/code-owner/last-push tier needs a 2nd maintainer (`--require-reviews`))",
+        "reported as INFO, not PASS: open Scorecard findings exist; each is routed to the sscsb control that gates it above"
       ]
     },
     {
@@ -656,8 +661,8 @@
         "pass": 5,
         "fail": 0,
         "gap": 0,
-        "unverified": 1,
-        "info": 0,
+        "unverified": 0,
+        "info": 1,
         "percent": 100.0
       },
       {
@@ -693,7 +698,7 @@
     "record_version": 1,
     "lane": "local",
     "namespace": "sscsb-scan-record",
-    "generated_at": "2026-09-12T15:48:01Z",
+    "generated_at": "2026-09-12T15:54:32Z",
     "sscsb_version": "0.4.0",
     "repo": {
       "owner": "grcengineering",
@@ -701,7 +706,7 @@
       "url": "https://github.com/grcengineering/awesome-grcengineering",
       "default_branch": "main",
       "branch": "main",
-      "commit": "35986dab84cf02c6962049198caa47a70665371c"
+      "commit": "8b3c6c498e3083109dd06488591540c161b27433"
     },
     "worktree": {
       "clean": true,
