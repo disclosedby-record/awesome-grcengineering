@@ -128,6 +128,7 @@ Open-source and commercial tools that enable GRC Engineering practices — polic
 | [**GRClanker**](https://www.grclanker.com/) | Spec-driven open-source AI GRC CLI — bring your own AI agent (Claude, Codex, Gemini…) to generate Go CLIs for FedRAMP, KEV, EPSS, SCF crosswalks. |
 | [**myctrl.tools**](https://www.myctrl.tools/) | Fast, searchable reference site for security compliance controls across frameworks (FedRAMP Rev5, DoD SRG, and more). |
 | [**SCF API**](https://hackidle.github.io/scf-api/) | API for the Secure Controls Framework (1,400+ controls mapped to 200+ laws, regulations, and frameworks). |
+| [**disclosedby**](https://disclosedby.com) | Dated record of the GDPR art. 28 subprocessor lists software companies publish: each row a quote of the company's own page, with what changed and when. Open JSON and Markdown per page, and an MCP server, for TPRM evidence pipelines. |
 | [**Compliance Trestle**](https://github.com/oscal-compass/compliance-trestle) | OSCAL-native compliance-as-code platform for CI/CD authoring, validation, and governance of compliance artifacts in git. |
 | [**claude-grc-engineering**](https://github.com/GRCEngClub/claude-grc-engineering) | Claude Code plugin suite for evidence collection, SCF crosswalks, multi-framework gap reports, and OSCAL workflows. |
 | [**Compliance to Policy (C2P)**](https://github.com/oscal-compass/compliance-to-policy) | Bridges OSCAL compliance-as-code with policy-as-code engines (Kyverno, OCM, Auditree); generates policies and ingests assessment results. |
